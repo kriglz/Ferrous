@@ -15,6 +15,8 @@
 		1FB38C98D71FAC826BC8D77F /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = A2F06AF19B749B91DF923DC3 /* catalog.json */; };
 		220F69A155A2EDC5CACED373 /* block.rle in Resources */ = {isa = PBXBuildFile; fileRef = 3AC7C0630CEB82B38BC66E66 /* block.rle */; };
 		2644F9D59089E5ED8C54F43B /* PatternLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4275E8A456FA3D1418D8EA5 /* PatternLibrary.swift */; };
+		3091FDD370F5D827C1BB20D7 /* pulsar.rle in Resources */ = {isa = PBXBuildFile; fileRef = F0535DF7D96911432D3522F1 /* pulsar.rle */; };
+		35823262C687BBA1758058B1 /* AgeUpdate.metal in Sources */ = {isa = PBXBuildFile; fileRef = AB51C48B842B760AB78BA49B /* AgeUpdate.metal */; };
 		3E226AA0BD27520EBD75F9CD /* PlaintextCellsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B01C32BEA6F43D441DFD28 /* PlaintextCellsParser.swift */; };
 		42587D340E6A803529EEB210 /* ToolMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7249378D8A9B7FF4B70499 /* ToolMode.swift */; };
 		4DCB778748E43AEEB1BB8983 /* PlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */; };
@@ -31,6 +33,7 @@
 		71406D00EC6EF355A5994DD0 /* gosperglidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = 603712287D6D770BC578B4FE /* gosperglidergun.rle */; };
 		794AF64B181EF8A6FBEC058E /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */; };
 		7A341B3CEE69C882D0C18264 /* PatternLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B33B77D7BA8B50621491 /* PatternLibraryView.swift */; };
+		80DDD9EF2AE9566A6616FE25 /* pulsar.rle in Resources */ = {isa = PBXBuildFile; fileRef = F0535DF7D96911432D3522F1 /* pulsar.rle */; };
 		82578DE4A8D5A26B89B7AF2E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA66E6E18F6BCE9FA10041 /* Camera.swift */; };
 		87C246ECDC759957F057571A /* RLEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C5D86D23DDE6ED43DBD09 /* RLEParser.swift */; };
 		8B833CACB3C6A5A03698E09D /* toad.rle in Resources */ = {isa = PBXBuildFile; fileRef = 5496177147B31659ED6696E1 /* toad.rle */; };
@@ -48,6 +51,7 @@
 		C26A6DCD4D0B01CCE4C4FE3B /* gosperglidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = 603712287D6D770BC578B4FE /* gosperglidergun.rle */; };
 		C41E02AD1595B06664036C51 /* KernelEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */; };
 		D9CDEE30D095CE513E3FFD62 /* beacon.rle in Resources */ = {isa = PBXBuildFile; fileRef = 02F815A27429CF914E98B323 /* beacon.rle */; };
+		DE22C6A871AD12CFCF540109 /* AgeUpdate.metal in Sources */ = {isa = PBXBuildFile; fileRef = AB51C48B842B760AB78BA49B /* AgeUpdate.metal */; };
 		DF95D543E8EE425B634C9BB8 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239830B0DADB0B82C9D1DA9 /* SidebarView.swift */; };
 		E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267B555E99392E51867D968 /* BitGrid.swift */; };
 		E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */; };
@@ -95,6 +99,7 @@
 		9515A781AA093C0DC0F1A285 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
 		9E46C81845DECF923C2E9538 /* SimulationEngine+Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SimulationEngine+Regions.swift"; sourceTree = "<group>"; };
 		A2F06AF19B749B91DF923DC3 /* catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalog.json; sourceTree = "<group>"; };
+		AB51C48B842B760AB78BA49B /* AgeUpdate.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = AgeUpdate.metal; sourceTree = "<group>"; };
 		AFA6074E60290CD29751C573 /* EditingControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingControlsView.swift; sourceTree = "<group>"; };
 		AFC5336C11399F9E37F8B0F0 /* CanvasMTKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasMTKView.swift; sourceTree = "<group>"; };
 		B267B555E99392E51867D968 /* BitGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitGrid.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4FAC6ED9FDCE641C60C342F /* FerrousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerrousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7249378D8A9B7FF4B70499 /* ToolMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolMode.swift; sourceTree = "<group>"; };
+		F0535DF7D96911432D3522F1 /* pulsar.rle */ = {isa = PBXFileReference; path = pulsar.rle; sourceTree = "<group>"; };
 		FD126F95B96C4049DF79B40F /* GridRender.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GridRender.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +245,7 @@
 		881C10E61208A8818C3D98BE /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				AB51C48B842B760AB78BA49B /* AgeUpdate.metal */,
 				79A9F259D1E1B2253239AC01 /* LifeStep.metal */,
 				C7F2A751788E105CC595634B /* LifeStepReference.metal */,
 				3FB774DC9843D2305ED6C208 /* ShaderTypes.h */,
@@ -266,6 +273,7 @@
 				A2F06AF19B749B91DF923DC3 /* catalog.json */,
 				3481A1F3C17D017FFD7952A0 /* glider.rle */,
 				603712287D6D770BC578B4FE /* gosperglidergun.rle */,
+				F0535DF7D96911432D3522F1 /* pulsar.rle */,
 				5496177147B31659ED6696E1 /* toad.rle */,
 			);
 			path = BuiltInPatterns;
@@ -419,6 +427,7 @@
 				BFE1822921EE8C3298934C76 /* catalog.json in Resources */,
 				51275873CEB1A78499BA23AB /* glider.rle in Resources */,
 				C26A6DCD4D0B01CCE4C4FE3B /* gosperglidergun.rle in Resources */,
+				80DDD9EF2AE9566A6616FE25 /* pulsar.rle in Resources */,
 				109360F9DFB135A291003078 /* toad.rle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +442,7 @@
 				1FB38C98D71FAC826BC8D77F /* catalog.json in Resources */,
 				9781186E874839A4CBD060E7 /* glider.rle in Resources */,
 				71406D00EC6EF355A5994DD0 /* gosperglidergun.rle in Resources */,
+				3091FDD370F5D827C1BB20D7 /* pulsar.rle in Resources */,
 				8B833CACB3C6A5A03698E09D /* toad.rle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35823262C687BBA1758058B1 /* AgeUpdate.metal in Sources */,
 				C41E02AD1595B06664036C51 /* KernelEquivalenceTests.swift in Sources */,
 				8EB9F20515F079085792806C /* LifeStep.metal in Sources */,
 				18D49F69DAF3A4195AD246CE /* LifeStepReference.metal in Sources */,
@@ -456,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE22C6A871AD12CFCF540109 /* AgeUpdate.metal in Sources */,
 				E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */,
 				E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */,
 				82578DE4A8D5A26B89B7AF2E /* Camera.swift in Sources */,

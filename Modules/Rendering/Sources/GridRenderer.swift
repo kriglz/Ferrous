@@ -66,6 +66,7 @@ final class GridRenderer: NSObject, MTKViewDelegate {
         encoder.setComputePipelineState(pipeline)
         encoder.setBuffer(engine.currentBuffer, offset: 0, index: 0)
         encoder.setBytes(&uniforms, length: MemoryLayout<RenderUniforms>.stride, index: 1)
+        encoder.setBuffer(engine.currentAgeBuffer, offset: 0, index: 2)
         encoder.setTexture(drawable.texture, index: 0)
 
         let threadWidth = pipeline.threadExecutionWidth

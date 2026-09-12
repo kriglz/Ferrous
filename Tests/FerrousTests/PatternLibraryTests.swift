@@ -85,8 +85,37 @@ final class PatternLibraryTests: XCTestCase {
 
     func testBuiltInLibraryLoadsAllCatalogEntries() {
         let library = PatternLibrary(bundle: Bundle(for: PatternLibraryTests.self))
-        XCTAssertEqual(library.patterns.count, 6, "Expected all 6 catalog entries to parse successfully")
+        XCTAssertEqual(library.patterns.count, 7, "Expected all 7 catalog entries to parse successfully")
         XCTAssertTrue(library.patterns.contains { $0.name == "Glider" })
+    }
+
+    func testPulsarOscillatesWithPeriod3() throws {
+        let library = PatternLibrary(bundle: Bundle(for: PatternLibraryTests.self))
+        let pulsar = try XCTUnwrap(library.patterns.first { $0.name == "Pulsar" })
+
+        let device = try XCTUnwrap(MTLCreateSystemDefaultDevice())
+        let mtlLibrary = try XCTUnwrap(device.makeDefaultLibrary(bundle: Bundle(for: PatternLibraryTests.self)))
+        let engine = try SimulationEngine(device: device, library: mtlLibrary, grid: BitGrid(width: 20, height: 20))
+        engine.stamp(pulsar, atRow: 3, col: 3, merge: false)
+
+        func snapshot() -> Set<PatternCell> {
+            var cells: Set<PatternCell> = []
+            for row in 0..<20 {
+                for col in 0..<20 where engine.cellAlive(row: row, col: col) {
+                    cells.insert(PatternCell(row: row, col: col))
+                }
+            }
+            return cells
+        }
+
+        let generation0 = snapshot()
+        engine.step(using: .optimized)
+        let generation1 = snapshot()
+        XCTAssertNotEqual(generation0, generation1, "Pulsar should actually change, not sit as a still life")
+        engine.step(using: .optimized)
+        engine.step(using: .optimized)
+        let generation3 = snapshot()
+        XCTAssertEqual(generation0, generation3, "Pulsar should return to its original state every 3 generations")
     }
 
     func testLibraryGliderTranslatesAfterFourGenerations() throws {
