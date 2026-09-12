@@ -2,12 +2,14 @@ import SwiftUI
 
 struct InspectorView: View {
     @ObservedObject var viewModel: SimulationViewModel
+    @State private var customRuleText: String = ""
 
     private let presets: [(name: String, rule: RuleSet)] = [
         ("Conway", .conway),
         ("HighLife", .highLife),
         ("Seeds", .seeds),
-        ("Day & Night", .dayAndNight)
+        ("Day & Night", .dayAndNight),
+        ("Fractal", .fractal)
     ]
 
     var body: some View {
@@ -26,6 +28,18 @@ struct InspectorView: View {
                 }
             }
             .labelsHidden()
+
+            HStack {
+                TextField("Custom (e.g. B3/S23)", text: $customRuleText)
+                    .textFieldStyle(.roundedBorder)
+                Button("Apply") {
+                    if let parsed = RuleSet(bsString: customRuleText) {
+                        viewModel.rule = parsed
+                    }
+                }
+                .disabled(RuleSet(bsString: customRuleText) == nil)
+            }
+            .onAppear { customRuleText = viewModel.rule.bsString }
 
             Text("Boundary").font(.headline)
             Picker("Boundary", selection: $viewModel.boundaryMode) {

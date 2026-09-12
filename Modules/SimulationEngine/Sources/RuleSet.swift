@@ -36,4 +36,10 @@ struct RuleSet {
     static let highLife = RuleSet(birth: [3, 6], survive: [2, 3])
     static let seeds = RuleSet(birth: [2], survive: [])
     static let dayAndNight = RuleSet(birth: [3, 6, 7, 8], survive: [3, 4, 6, 7, 8])
+    /// "Replicator": born/survives whenever the neighbor count is odd, i.e.
+    /// the next state is the XOR/parity of neighbors. XOR rules are
+    /// algebraically linear, which is exactly why they're self-similar --
+    /// any seed pattern (even a single cell) copies itself recursively
+    /// into a Sierpinski-triangle-like fractal.
+    static let fractal = RuleSet(birth: [1, 3, 5, 7], survive: [1, 3, 5, 7])
 }
