@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18D49F69DAF3A4195AD246CE /* LifeStepReference.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F2A751788E105CC595634B /* LifeStepReference.metal */; };
+		4DCB778748E43AEEB1BB8983 /* PlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */; };
+		4F16EEE6FA4940DB7AF842D7 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C36B854BC67460525D43AF /* PerformanceTests.swift */; };
+		4F770CBCE1E46C3496CD5CCA /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812D6C2CB24DD79B69617FBB /* RuleSet.swift */; };
+		536E6A9CE2CC1A0B99CF6BCC /* FerrousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A4E9A65B783BA45A993BF /* FerrousApp.swift */; };
+		5451C5EE64E4079CE4EB0AA4 /* LifeStep.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F259D1E1B2253239AC01 /* LifeStep.metal */; };
+		5B7F36717CCE0307290A6728 /* GridRender.metal in Sources */ = {isa = PBXBuildFile; fileRef = FD126F95B96C4049DF79B40F /* GridRender.metal */; };
+		7001BBBEE7D1463D3E4182AA /* MetalCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87852B27E79DA12514DB96FA /* MetalCanvasView.swift */; };
+		794AF64B181EF8A6FBEC058E /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */; };
+		8EB9F20515F079085792806C /* LifeStep.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F259D1E1B2253239AC01 /* LifeStep.metal */; };
+		90B6EB654E51826D7612FB26 /* GridRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FC02838206291E6F7A78B /* GridRenderer.swift */; };
+		94A3D400187AAABEF1F0A542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */; };
+		9C1BA5E881B4D732E0B12173 /* SimulationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CD305DFBDB5BCBBAD6D06 /* SimulationEngine.swift */; };
+		B73A446F7637A96B981F3BE2 /* LifeStepReference.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F2A751788E105CC595634B /* LifeStepReference.metal */; };
+		C41E02AD1595B06664036C51 /* KernelEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */; };
+		E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267B555E99392E51867D968 /* BitGrid.swift */; };
+		E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE2A9EE9511AE0018784A3CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE91BBA5D2D8D3BE4D772CC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BEF13B6338D4A66C696BE48;
+			remoteInfo = Ferrous;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		190CD305DFBDB5BCBBAD6D06 /* SimulationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationEngine.swift; sourceTree = "<group>"; };
+		3FB774DC9843D2305ED6C208 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		42C7995B0DCB0C5CA0479960 /* Ferrous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ferrous.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KernelEquivalenceTests.swift; sourceTree = "<group>"; };
+		571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlsView.swift; sourceTree = "<group>"; };
+		64C36B854BC67460525D43AF /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		79A9F259D1E1B2253239AC01 /* LifeStep.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LifeStep.metal; sourceTree = "<group>"; };
+		812D6C2CB24DD79B69617FBB /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
+		842FC02838206291E6F7A78B /* GridRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRenderer.swift; sourceTree = "<group>"; };
+		86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundaryMode.swift; sourceTree = "<group>"; };
+		87852B27E79DA12514DB96FA /* MetalCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCanvasView.swift; sourceTree = "<group>"; };
+		B267B555E99392E51867D968 /* BitGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitGrid.swift; sourceTree = "<group>"; };
+		C62A4E9A65B783BA45A993BF /* FerrousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerrousApp.swift; sourceTree = "<group>"; };
+		C7F2A751788E105CC595634B /* LifeStepReference.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LifeStepReference.metal; sourceTree = "<group>"; };
+		CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
+		E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4FAC6ED9FDCE641C60C342F /* FerrousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerrousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD126F95B96C4049DF79B40F /* GridRender.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GridRender.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2DFE8E1A7C451013031432EA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				84D011853CF3478C91E03A72 /* GameOfLifeShared */,
+				31DDAE861B7B51B67542491A /* Rendering */,
+				305F85C02B75C09901030417 /* SimulationEngine */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		305F85C02B75C09901030417 /* SimulationEngine */ = {
+			isa = PBXGroup;
+			children = (
+				881C10E61208A8818C3D98BE /* Shaders */,
+				39F85DA2CBC9583CE9F62B50 /* Sources */,
+			);
+			path = SimulationEngine;
+			sourceTree = "<group>";
+		};
+		31DDAE861B7B51B67542491A /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				5F7E33E4E98E81F693F2D4DF /* Shaders */,
+				D79C939764747A2D5CF6F3A1 /* Sources */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		351B3892DF6A9ED3D09AD81D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		39F85DA2CBC9583CE9F62B50 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B267B555E99392E51867D968 /* BitGrid.swift */,
+				812D6C2CB24DD79B69617FBB /* RuleSet.swift */,
+				190CD305DFBDB5BCBBAD6D06 /* SimulationEngine.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		53904DA83017530D96E63420 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */,
+				87852B27E79DA12514DB96FA /* MetalCanvasView.swift */,
+				571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F7E33E4E98E81F693F2D4DF /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FD126F95B96C4049DF79B40F /* GridRender.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		6F632839D77B807365D71302 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				701F9A565FEC442D4DCCA938 /* ViewModels */,
+				53904DA83017530D96E63420 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		701F9A565FEC442D4DCCA938 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84D011853CF3478C91E03A72 /* GameOfLifeShared */ = {
+			isa = PBXGroup;
+			children = (
+				351B3892DF6A9ED3D09AD81D /* Sources */,
+			);
+			path = GameOfLifeShared;
+			sourceTree = "<group>";
+		};
+		881C10E61208A8818C3D98BE /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				79A9F259D1E1B2253239AC01 /* LifeStep.metal */,
+				C7F2A751788E105CC595634B /* LifeStepReference.metal */,
+				3FB774DC9843D2305ED6C208 /* ShaderTypes.h */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		A3CFD981349B7F5B8A1887EC = {
+			isa = PBXGroup;
+			children = (
+				E1323E858A84E17A21EAB0D1 /* App */,
+				2DFE8E1A7C451013031432EA /* Modules */,
+				EF9664FD06A8E95580D4475B /* Tests */,
+				6F632839D77B807365D71302 /* UI */,
+				F5104598026211DDF03D3F26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D79C939764747A2D5CF6F3A1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				842FC02838206291E6F7A78B /* GridRenderer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E1323E858A84E17A21EAB0D1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C62A4E9A65B783BA45A993BF /* FerrousApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF9664FD06A8E95580D4475B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA00B656A608037EB3212F3A /* FerrousTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F5104598026211DDF03D3F26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C7995B0DCB0C5CA0479960 /* Ferrous.app */,
+				E4FAC6ED9FDCE641C60C342F /* FerrousTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA00B656A608037EB3212F3A /* FerrousTests */ = {
+			isa = PBXGroup;
+			children = (
+				557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */,
+				64C36B854BC67460525D43AF /* PerformanceTests.swift */,
+			);
+			path = FerrousTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BEF13B6338D4A66C696BE48 /* Ferrous */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 863A8405DF151F7F17EDB4E5 /* Build configuration list for PBXNativeTarget "Ferrous" */;
+			buildPhases = (
+				DDBECED60C19E71FB98DA739 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ferrous;
+			packageProductDependencies = (
+			);
+			productName = Ferrous;
+			productReference = 42C7995B0DCB0C5CA0479960 /* Ferrous.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A231C2ED3C921ABCE73F7DFD /* FerrousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFC2EE9D57FB979BA93BDE0B /* Build configuration list for PBXNativeTarget "FerrousTests" */;
+			buildPhases = (
+				CFF7CB384E21F5F42408FB7C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2E3091C9CA24C228B874470 /* PBXTargetDependency */,
+			);
+			name = FerrousTests;
+			packageProductDependencies = (
+			);
+			productName = FerrousTests;
+			productReference = E4FAC6ED9FDCE641C60C342F /* FerrousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE91BBA5D2D8D3BE4D772CC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1BEF13B6338D4A66C696BE48 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2A949A7F32C6F46A087345C3 /* Build configuration list for PBXProject "Ferrous" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A3CFD981349B7F5B8A1887EC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F5104598026211DDF03D3F26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BEF13B6338D4A66C696BE48 /* Ferrous */,
+				A231C2ED3C921ABCE73F7DFD /* FerrousTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFF7CB384E21F5F42408FB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41E02AD1595B06664036C51 /* KernelEquivalenceTests.swift in Sources */,
+				8EB9F20515F079085792806C /* LifeStep.metal in Sources */,
+				18D49F69DAF3A4195AD246CE /* LifeStepReference.metal in Sources */,
+				4F16EEE6FA4940DB7AF842D7 /* PerformanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDBECED60C19E71FB98DA739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */,
+				E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */,
+				94A3D400187AAABEF1F0A542 /* ContentView.swift in Sources */,
+				536E6A9CE2CC1A0B99CF6BCC /* FerrousApp.swift in Sources */,
+				5B7F36717CCE0307290A6728 /* GridRender.metal in Sources */,
+				90B6EB654E51826D7612FB26 /* GridRenderer.swift in Sources */,
+				5451C5EE64E4079CE4EB0AA4 /* LifeStep.metal in Sources */,
+				B73A446F7637A96B981F3BE2 /* LifeStepReference.metal in Sources */,
+				7001BBBEE7D1463D3E4182AA /* MetalCanvasView.swift in Sources */,
+				4DCB778748E43AEEB1BB8983 /* PlaybackControlsView.swift in Sources */,
+				4F770CBCE1E46C3496CD5CCA /* RuleSet.swift in Sources */,
+				9C1BA5E881B4D732E0B12173 /* SimulationEngine.swift in Sources */,
+				794AF64B181EF8A6FBEC058E /* SimulationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2E3091C9CA24C228B874470 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BEF13B6338D4A66C696BE48 /* Ferrous */;
+			targetProxy = FE2A9EE9511AE0018784A3CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08C878A8D15BC69CDF555701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kriglz.Ferrous;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Modules/SimulationEngine/Shaders/ShaderTypes.h;
+			};
+			name = Debug;
+		};
+		0DE4B14DCFB45B57EE2D3DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		117814BAB8BA0B1826BDFE55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kriglz.FerrousTests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Modules/SimulationEngine/Shaders/ShaderTypes.h;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ferrous.app/Contents/MacOS/Ferrous";
+			};
+			name = Debug;
+		};
+		4C642A892686D1F0505D24D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kriglz.FerrousTests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Modules/SimulationEngine/Shaders/ShaderTypes.h;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ferrous.app/Contents/MacOS/Ferrous";
+			};
+			name = Release;
+		};
+		589F3CF5B2E583E666C1CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6105676F76034DC948B6C7B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kriglz.Ferrous;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Modules/SimulationEngine/Shaders/ShaderTypes.h;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A949A7F32C6F46A087345C3 /* Build configuration list for PBXProject "Ferrous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE4B14DCFB45B57EE2D3DDF /* Debug */,
+				589F3CF5B2E583E666C1CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		863A8405DF151F7F17EDB4E5 /* Build configuration list for PBXNativeTarget "Ferrous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C878A8D15BC69CDF555701 /* Debug */,
+				6105676F76034DC948B6C7B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DFC2EE9D57FB979BA93BDE0B /* Build configuration list for PBXNativeTarget "FerrousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117814BAB8BA0B1826BDFE55 /* Debug */,
+				4C642A892686D1F0505D24D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE91BBA5D2D8D3BE4D772CC3 /* Project object */;
+}

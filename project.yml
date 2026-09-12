@@ -1,0 +1,57 @@
+name: Ferrous
+options:
+  bundleIdPrefix: com.kriglz
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  Ferrous:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+      - path: UI
+      - path: Modules/GameOfLifeShared/Sources
+      - path: Modules/SimulationEngine/Sources
+      - path: Modules/SimulationEngine/Shaders
+      - path: Modules/Rendering/Sources
+      - path: Modules/Rendering/Shaders
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kriglz.Ferrous
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_OBJC_BRIDGING_HEADER: Modules/SimulationEngine/Shaders/ShaderTypes.h
+  FerrousTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/FerrousTests
+      - path: Modules/SimulationEngine/Shaders
+    dependencies:
+      - target: Ferrous
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kriglz.FerrousTests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_OBJC_BRIDGING_HEADER: Modules/SimulationEngine/Shaders/ShaderTypes.h
+schemes:
+  Ferrous:
+    build:
+      targets:
+        Ferrous: all
+        FerrousTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - FerrousTests
