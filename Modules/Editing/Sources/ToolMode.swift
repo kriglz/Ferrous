@@ -3,6 +3,7 @@ enum ToolMode: String, CaseIterable, Identifiable {
     case erase = "Erase"
     case pan = "Pan"
     case select = "Select"
+    case stamp = "Stamp"
 
     var id: String { rawValue }
 }

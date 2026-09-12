@@ -21,6 +21,9 @@ targets:
       - path: Modules/Rendering/Sources
       - path: Modules/Rendering/Shaders
       - path: Modules/Editing/Sources
+      - path: Modules/PatternLibrary/Sources
+      - path: Modules/PatternLibrary/Resources/BuiltInPatterns
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.kriglz.Ferrous
@@ -37,6 +40,8 @@ targets:
     sources:
       - path: Tests/FerrousTests
       - path: Modules/SimulationEngine/Shaders
+      - path: Modules/PatternLibrary/Resources/BuiltInPatterns
+        buildPhase: resources
     dependencies:
       - target: Ferrous
     settings:

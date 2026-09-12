@@ -13,6 +13,7 @@ final class CanvasMTKView: MTKView {
     private var hasFittedInitialView = false
     private var lastDragCell: (row: Int, col: Int)?
     private var lastPanLocation: CGPoint?
+    private var trackingArea: NSTrackingArea?
 
     override var isFlipped: Bool { true }
     override var acceptsFirstResponder: Bool { true }
@@ -24,6 +25,28 @@ final class CanvasMTKView: MTKView {
             camera.fitToGrid(width: engine.grid.width, height: engine.grid.height)
             hasFittedInitialView = true
         }
+    }
+
+    override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
+        window?.acceptsMouseMovedEvents = true
+    }
+
+    override func updateTrackingAreas() {
+        super.updateTrackingAreas()
+        if let trackingArea { removeTrackingArea(trackingArea) }
+        let newArea = NSTrackingArea(rect: bounds, options: [.mouseMoved, .activeInKeyWindow, .inVisibleRect], owner: self, userInfo: nil)
+        addTrackingArea(newArea)
+        trackingArea = newArea
+    }
+
+    override func mouseMoved(with event: NSEvent) {
+        guard editingViewModel.toolMode == .stamp, editingViewModel.pendingPattern != nil else {
+            editingViewModel.stampPreviewOrigin = nil
+            return
+        }
+        let point = convert(event.locationInWindow, from: nil)
+        editingViewModel.stampPreviewOrigin = camera.cell(atScreenPoint: point, gridWidth: engine.grid.width, gridHeight: engine.grid.height)
     }
 
     override func scrollWheel(with event: NSEvent) {
@@ -49,6 +72,8 @@ final class CanvasMTKView: MTKView {
             let cell = camera.cell(atScreenPoint: point, gridWidth: engine.grid.width, gridHeight: engine.grid.height)
             editingViewModel.selectionStart = cell
             editingViewModel.selectionEnd = cell
+        case .stamp:
+            placeStamp(at: point)
         }
     }
 
@@ -67,12 +92,21 @@ final class CanvasMTKView: MTKView {
             if let cell = camera.cell(atScreenPoint: point, gridWidth: engine.grid.width, gridHeight: engine.grid.height) {
                 editingViewModel.selectionEnd = cell
             }
+        case .stamp:
+            break
         }
     }
 
     override func mouseUp(with event: NSEvent) {
         lastPanLocation = nil
         lastDragCell = nil
+    }
+
+    private func placeStamp(at point: CGPoint) {
+        guard !simulationViewModel.isPlaying,
+              let pattern = editingViewModel.pendingPattern,
+              let cell = camera.cell(atScreenPoint: point, gridWidth: engine.grid.width, gridHeight: engine.grid.height) else { return }
+        engine.stamp(pattern, atRow: cell.row, col: cell.col, merge: editingViewModel.pendingPatternMerge)
     }
 
     private func paintCell(at point: CGPoint) {

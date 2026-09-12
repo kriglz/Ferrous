@@ -1,0 +1,4 @@
+#N Block
+#C The smallest and most common still life.
+x = 2, y = 2, rule = B3/S23
+2o$2o!

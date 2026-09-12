@@ -13,8 +13,28 @@ struct EditingControlsView: View {
                 }
             }
             .pickerStyle(.segmented)
-            .frame(maxWidth: 320)
+            .frame(maxWidth: 360)
             .labelsHidden()
+
+            Button("Copy Selection") {
+                editingViewModel.copySelection(from: engine)
+            }
+            .disabled(editingViewModel.toolMode != .select || editingViewModel.selectionStart == nil)
+
+            Button("Rotate") {
+                editingViewModel.pendingPattern = editingViewModel.pendingPattern?.rotated90()
+            }
+            .disabled(editingViewModel.pendingPattern == nil)
+
+            Button("Flip H") {
+                editingViewModel.pendingPattern = editingViewModel.pendingPattern?.flippedHorizontally()
+            }
+            .disabled(editingViewModel.pendingPattern == nil)
+
+            Button("Flip V") {
+                editingViewModel.pendingPattern = editingViewModel.pendingPattern?.flippedVertically()
+            }
+            .disabled(editingViewModel.pendingPattern == nil)
 
             Button("Reset View") {
                 camera.fitToGrid(width: engine.grid.width, height: engine.grid.height)

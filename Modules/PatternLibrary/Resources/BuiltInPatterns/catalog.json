@@ -1,0 +1,8 @@
+[
+  { "id": "block", "displayName": "Block", "category": "Still Life", "fileName": "block" },
+  { "id": "blinker", "displayName": "Blinker", "category": "Oscillator", "fileName": "blinker" },
+  { "id": "toad", "displayName": "Toad", "category": "Oscillator", "fileName": "toad" },
+  { "id": "beacon", "displayName": "Beacon", "category": "Oscillator", "fileName": "beacon" },
+  { "id": "glider", "displayName": "Glider", "category": "Spaceship", "fileName": "glider" },
+  { "id": "gosperglidergun", "displayName": "Gosper Glider Gun", "category": "Gun", "fileName": "gosperglidergun" }
+]

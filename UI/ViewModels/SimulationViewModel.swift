@@ -7,6 +7,12 @@ final class SimulationViewModel: ObservableObject {
     @Published var isPlaying = false
     @Published var generationCount: UInt64 = 0
     @Published var stepsPerSecond: Double = 10
+    @Published var rule: RuleSet = .conway {
+        didSet { engine.rule = rule }
+    }
+    @Published var boundaryMode: BoundaryMode = .toroidal {
+        didSet { engine.boundaryMode = boundaryMode }
+    }
 
     let engine: SimulationEngine
     private var timer: Timer?
