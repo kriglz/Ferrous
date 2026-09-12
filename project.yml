@@ -20,6 +20,7 @@ targets:
       - path: Modules/SimulationEngine/Shaders
       - path: Modules/Rendering/Sources
       - path: Modules/Rendering/Shaders
+      - path: Modules/Editing/Sources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.kriglz.Ferrous

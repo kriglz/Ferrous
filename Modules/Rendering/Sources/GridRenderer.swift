@@ -1,8 +1,7 @@
 import Metal
 import MetalKit
 
-/// M1: draws the whole grid scaled to fit the drawable. Viewport-aware
-/// pan/zoom sampling (and the dedicated zoom-out density sampling) lands in M2.
+/// Renders the visible viewport of the grid, sampled through `Camera`.
 final class GridRenderer: NSObject, MTKViewDelegate {
     private struct RenderUniforms {
         var gridWidth: UInt32
@@ -10,11 +9,18 @@ final class GridRenderer: NSObject, MTKViewDelegate {
         var wordsPerRow: UInt32
         var outputWidth: UInt32
         var outputHeight: UInt32
+        var originCellXWhole: Int32
+        var originCellYWhole: Int32
+        var originCellXFraction: Float
+        var originCellYFraction: Float
+        var cellsPerPixel: Float
+        var pointsPerPixel: Float
     }
 
     private let commandQueue: MTLCommandQueue
     private let pipeline: MTLComputePipelineState
     var engine: SimulationEngine?
+    var camera: Camera?
 
     init(device: MTLDevice, library: MTLLibrary) throws {
         guard let queue = device.makeCommandQueue() else {
@@ -30,18 +36,32 @@ final class GridRenderer: NSObject, MTKViewDelegate {
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
 
+    @MainActor
     func draw(in view: MTKView) {
         guard let engine = engine,
+              let camera = camera,
               let drawable = view.currentDrawable,
               let commandBuffer = commandQueue.makeCommandBuffer(),
               let encoder = commandBuffer.makeComputeCommandEncoder() else { return }
+
+        let originXWhole = Int32(camera.originCellX.rounded(.down))
+        let originYWhole = Int32(camera.originCellY.rounded(.down))
+        let originXFraction = Float(camera.originCellX - Double(originXWhole))
+        let originYFraction = Float(camera.originCellY - Double(originYWhole))
+        let pointsPerPixel = Float(view.bounds.width > 0 ? Double(view.bounds.width) / Double(drawable.texture.width) : 1)
 
         var uniforms = RenderUniforms(
             gridWidth: UInt32(engine.grid.width),
             gridHeight: UInt32(engine.grid.height),
             wordsPerRow: UInt32(engine.grid.wordsPerRow),
             outputWidth: UInt32(drawable.texture.width),
-            outputHeight: UInt32(drawable.texture.height))
+            outputHeight: UInt32(drawable.texture.height),
+            originCellXWhole: originXWhole,
+            originCellYWhole: originYWhole,
+            originCellXFraction: originXFraction,
+            originCellYFraction: originYFraction,
+            cellsPerPixel: Float(camera.cellsPerPixel),
+            pointsPerPixel: pointsPerPixel)
 
         encoder.setComputePipelineState(pipeline)
         encoder.setBuffer(engine.currentBuffer, offset: 0, index: 0)

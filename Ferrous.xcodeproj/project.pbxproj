@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		18D49F69DAF3A4195AD246CE /* LifeStepReference.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F2A751788E105CC595634B /* LifeStepReference.metal */; };
+		1E59F28E67AD015D3BDD4305 /* EditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD5C14515A1F4E71932484 /* EditingViewModel.swift */; };
+		42587D340E6A803529EEB210 /* ToolMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7249378D8A9B7FF4B70499 /* ToolMode.swift */; };
 		4DCB778748E43AEEB1BB8983 /* PlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */; };
 		4F16EEE6FA4940DB7AF842D7 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C36B854BC67460525D43AF /* PerformanceTests.swift */; };
 		4F770CBCE1E46C3496CD5CCA /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812D6C2CB24DD79B69617FBB /* RuleSet.swift */; };
 		536E6A9CE2CC1A0B99CF6BCC /* FerrousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A4E9A65B783BA45A993BF /* FerrousApp.swift */; };
 		5451C5EE64E4079CE4EB0AA4 /* LifeStep.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F259D1E1B2253239AC01 /* LifeStep.metal */; };
 		5B7F36717CCE0307290A6728 /* GridRender.metal in Sources */ = {isa = PBXBuildFile; fileRef = FD126F95B96C4049DF79B40F /* GridRender.metal */; };
+		5D26072DB3222DAEE646B256 /* EditingControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6074E60290CD29751C573 /* EditingControlsView.swift */; };
 		7001BBBEE7D1463D3E4182AA /* MetalCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87852B27E79DA12514DB96FA /* MetalCanvasView.swift */; };
 		794AF64B181EF8A6FBEC058E /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */; };
+		82578DE4A8D5A26B89B7AF2E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA66E6E18F6BCE9FA10041 /* Camera.swift */; };
 		8EB9F20515F079085792806C /* LifeStep.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A9F259D1E1B2253239AC01 /* LifeStep.metal */; };
 		90B6EB654E51826D7612FB26 /* GridRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FC02838206291E6F7A78B /* GridRenderer.swift */; };
 		94A3D400187AAABEF1F0A542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */; };
 		9C1BA5E881B4D732E0B12173 /* SimulationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190CD305DFBDB5BCBBAD6D06 /* SimulationEngine.swift */; };
 		B73A446F7637A96B981F3BE2 /* LifeStepReference.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F2A751788E105CC595634B /* LifeStepReference.metal */; };
+		BA976961D7F14374E98A20EF /* SelectionOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6206CEBB4F27FAC08DF8E /* SelectionOverlayView.swift */; };
 		C41E02AD1595B06664036C51 /* KernelEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */; };
 		E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267B555E99392E51867D968 /* BitGrid.swift */; };
 		E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */; };
+		F905F595735F906C79E46692 /* CanvasMTKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5336C11399F9E37F8B0F0 /* CanvasMTKView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,23 +43,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18DA66E6E18F6BCE9FA10041 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		190CD305DFBDB5BCBBAD6D06 /* SimulationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationEngine.swift; sourceTree = "<group>"; };
 		3FB774DC9843D2305ED6C208 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		42C7995B0DCB0C5CA0479960 /* Ferrous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ferrous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557FC2FD866D7283B5EEC285 /* KernelEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KernelEquivalenceTests.swift; sourceTree = "<group>"; };
 		571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlsView.swift; sourceTree = "<group>"; };
+		60BD5C14515A1F4E71932484 /* EditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewModel.swift; sourceTree = "<group>"; };
 		64C36B854BC67460525D43AF /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		79A9F259D1E1B2253239AC01 /* LifeStep.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LifeStep.metal; sourceTree = "<group>"; };
+		7BE6206CEBB4F27FAC08DF8E /* SelectionOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionOverlayView.swift; sourceTree = "<group>"; };
 		812D6C2CB24DD79B69617FBB /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
 		842FC02838206291E6F7A78B /* GridRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRenderer.swift; sourceTree = "<group>"; };
 		86EF1F9EBDAC104C081E1D4E /* BoundaryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundaryMode.swift; sourceTree = "<group>"; };
 		87852B27E79DA12514DB96FA /* MetalCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCanvasView.swift; sourceTree = "<group>"; };
+		AFA6074E60290CD29751C573 /* EditingControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingControlsView.swift; sourceTree = "<group>"; };
+		AFC5336C11399F9E37F8B0F0 /* CanvasMTKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasMTKView.swift; sourceTree = "<group>"; };
 		B267B555E99392E51867D968 /* BitGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitGrid.swift; sourceTree = "<group>"; };
 		C62A4E9A65B783BA45A993BF /* FerrousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerrousApp.swift; sourceTree = "<group>"; };
 		C7F2A751788E105CC595634B /* LifeStepReference.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LifeStepReference.metal; sourceTree = "<group>"; };
 		CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
 		E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4FAC6ED9FDCE641C60C342F /* FerrousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerrousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7249378D8A9B7FF4B70499 /* ToolMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolMode.swift; sourceTree = "<group>"; };
 		FD126F95B96C4049DF79B40F /* GridRender.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GridRender.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +73,7 @@
 		2DFE8E1A7C451013031432EA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				35E6327713F25EA255A4D033 /* Editing */,
 				84D011853CF3478C91E03A72 /* GameOfLifeShared */,
 				31DDAE861B7B51B67542491A /* Rendering */,
 				305F85C02B75C09901030417 /* SimulationEngine */,
@@ -94,6 +107,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		35E6327713F25EA255A4D033 /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA44723C18C76717711955 /* Sources */,
+			);
+			path = Editing;
+			sourceTree = "<group>";
+		};
 		39F85DA2CBC9583CE9F62B50 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +128,12 @@
 		53904DA83017530D96E63420 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AFC5336C11399F9E37F8B0F0 /* CanvasMTKView.swift */,
 				E3FBC8EFC1B4EBA8256DFCB0 /* ContentView.swift */,
+				AFA6074E60290CD29751C573 /* EditingControlsView.swift */,
 				87852B27E79DA12514DB96FA /* MetalCanvasView.swift */,
 				571207D2CD10AA73FE2C9D1E /* PlaybackControlsView.swift */,
+				7BE6206CEBB4F27FAC08DF8E /* SelectionOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +158,7 @@
 		701F9A565FEC442D4DCCA938 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				60BD5C14515A1F4E71932484 /* EditingViewModel.swift */,
 				CA16EAAB5C99FE4B99504E02 /* SimulationViewModel.swift */,
 			);
 			path = ViewModels;
@@ -168,9 +193,18 @@
 			);
 			sourceTree = "<group>";
 		};
+		B9BA44723C18C76717711955 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB7249378D8A9B7FF4B70499 /* ToolMode.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		D79C939764747A2D5CF6F3A1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				18DA66E6E18F6BCE9FA10041 /* Camera.swift */,
 				842FC02838206291E6F7A78B /* GridRenderer.swift */,
 			);
 			path = Sources;
@@ -300,7 +334,11 @@
 			files = (
 				E2AF0B9B93EE95E340F56F1F /* BitGrid.swift in Sources */,
 				E64483FF94B7030A01DAE691 /* BoundaryMode.swift in Sources */,
+				82578DE4A8D5A26B89B7AF2E /* Camera.swift in Sources */,
+				F905F595735F906C79E46692 /* CanvasMTKView.swift in Sources */,
 				94A3D400187AAABEF1F0A542 /* ContentView.swift in Sources */,
+				5D26072DB3222DAEE646B256 /* EditingControlsView.swift in Sources */,
+				1E59F28E67AD015D3BDD4305 /* EditingViewModel.swift in Sources */,
 				536E6A9CE2CC1A0B99CF6BCC /* FerrousApp.swift in Sources */,
 				5B7F36717CCE0307290A6728 /* GridRender.metal in Sources */,
 				90B6EB654E51826D7612FB26 /* GridRenderer.swift in Sources */,
@@ -309,8 +347,10 @@
 				7001BBBEE7D1463D3E4182AA /* MetalCanvasView.swift in Sources */,
 				4DCB778748E43AEEB1BB8983 /* PlaybackControlsView.swift in Sources */,
 				4F770CBCE1E46C3496CD5CCA /* RuleSet.swift in Sources */,
+				BA976961D7F14374E98A20EF /* SelectionOverlayView.swift in Sources */,
 				9C1BA5E881B4D732E0B12173 /* SimulationEngine.swift in Sources */,
 				794AF64B181EF8A6FBEC058E /* SimulationViewModel.swift in Sources */,
+				42587D340E6A803529EEB210 /* ToolMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

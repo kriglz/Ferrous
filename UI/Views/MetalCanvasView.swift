@@ -2,23 +2,30 @@ import SwiftUI
 import MetalKit
 
 struct MetalCanvasView: NSViewRepresentable {
-    let engine: SimulationEngine
+    @ObservedObject var simulationViewModel: SimulationViewModel
+    @ObservedObject var editingViewModel: EditingViewModel
+    let camera: Camera
 
     func makeCoordinator() -> GridRenderer {
-        guard let library = engine.device.makeDefaultLibrary() else {
+        guard let library = simulationViewModel.engine.device.makeDefaultLibrary() else {
             fatalError("Failed to load default Metal library")
         }
         do {
-            let renderer = try GridRenderer(device: engine.device, library: library)
-            renderer.engine = engine
+            let renderer = try GridRenderer(device: simulationViewModel.engine.device, library: library)
+            renderer.engine = simulationViewModel.engine
+            renderer.camera = camera
             return renderer
         } catch {
             fatalError("Failed to create GridRenderer: \(error)")
         }
     }
 
-    func makeNSView(context: Context) -> MTKView {
-        let view = MTKView(frame: .zero, device: engine.device)
+    func makeNSView(context: Context) -> CanvasMTKView {
+        let view = CanvasMTKView(frame: .zero, device: simulationViewModel.engine.device)
+        view.camera = camera
+        view.engine = simulationViewModel.engine
+        view.editingViewModel = editingViewModel
+        view.simulationViewModel = simulationViewModel
         view.delegate = context.coordinator
         view.framebufferOnly = false
         view.enableSetNeedsDisplay = false
@@ -28,5 +35,5 @@ struct MetalCanvasView: NSViewRepresentable {
         return view
     }
 
-    func updateNSView(_ nsView: MTKView, context: Context) {}
+    func updateNSView(_ nsView: CanvasMTKView, context: Context) {}
 }
